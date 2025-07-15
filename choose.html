@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Choose Your Side</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    function choose(side) {
+      const result = document.getElementById("choiceResult");
+      if (side === "Autobot") {
+        result.textContent = "Just like Prime, You're loyal, brave, and ride or die. Welcome to the side of love, Ameer.";
+      } else {
+        result.textContent = "Even villains fall hard. I’d let you steal my spark and never look back 😈❤️.";
+      }
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="reasons.html">Reasons</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="messages.html">Love Messages</a>
+    <a href="choose.html">Choose Your Side</a>
+  </nav>
+
+  <section>
+    <h2>Choose Your Side, Baby</h2>
+    <button class="choice-btn" onclick="choose('Autobot')">🚗 Autobot</button>
+    <button class="choice-btn" onclick="choose('Decepticon')">💀 Decepticon</button>
+    <p id="choiceResult" style="margin-top: 2rem; font-size: 1.2rem;"></p>
+  </section>
+</body>
+</html>

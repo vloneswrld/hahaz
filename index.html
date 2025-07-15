@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>You're My Prime</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Style for the play button */
+    #play-button {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #023E8A;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="reasons.html">Reasons</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="messages.html">Love Messages</a>
+    <a href="choose.html">Choose Your Side</a>
+  </nav>
+
+  <!-- Floating Emojis -->
+  <div class="floating-emoji" style="left: 5%;">🏎️</div>
+  <div class="floating-emoji" style="left: 25%;">✨</div>
+  <div class="floating-emoji" style="left: 45%;">❤️</div>
+  <div class="floating-emoji" style="left: 65%;">⚙️</div>
+  <div class="floating-emoji" style="left: 85%;">🏎️</div>
+
+  <section>
+    <h1>You're More Than Meets the Eye, Ameer</h1>
+    <p>Welcome to our lil Cybertron, where my spark belongs to you.</p>
+
+    <img src="https://i.imgur.com/GJxcmnv.png" class="robot" alt="Optimus Prime" />
+    <img src="https://i.imgur.com/8Xiq0Gj.png" class="robot" alt="Bumblebee" />
+  </section>
+
+  <!-- Audio element (hidden) -->
+  <audio id="bg-music">
+    <source src="music.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Play/Pause button -->
+  <button id="play-button">▶️ Play Music</button>
+
+  <script>
+    const audio = document.getElementById('bg-music');
+    const button = document.getElementById('play-button');
+
+    button.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        button.textContent = '⏸️ Pause Music';
+      } else {
+        audio.pause();
+        button.textContent = '▶️ Play Music';
+      }
+    });
+  </script>
+</body>
+</html>
